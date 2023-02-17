@@ -1,0 +1,168 @@
+html {
+    height: 100%;
+    width: 100%;
+    font-family: sans-serif;
+  }
+  
+  
+  .skybox {
+    background-color: midnightblue;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+  }
+  
+  .sun {
+    display:none;
+    width: 75px;
+    height: 75px;
+    background-color: yellow;
+    border-radius: 37.5px;
+    position: absolute;
+    left: 0px;
+    top: calc(50vh - 37.5px);
+    z-index:1000;
+    transform-origin: 50vw 100vh;
+    transition: all 3s ease;
+  }
+  
+  
+  .skybox:hover .sun,
+  .skybox:hover .moon
+  {
+    transform: rotateZ(180deg)
+  }
+  
+  
+  .skybox:hover .dark {
+    transform: translateX(-75px);
+  }
+  
+  .skybox:hover .moon-content {
+    transform: rotateZ(-180deg)
+  }
+  
+  .moon {
+    position: absolute;
+    left: 0px;
+    top: calc(50vh - 37.5px);
+    z-index:1000;
+    transform-origin: 50vw 100vh;
+    transition: all 5s linear;
+  }
+  
+  .moon-content {
+    border: 1px solid red;
+    width: 150px;
+    height: 75px;
+    transition: all 5s linear
+  }
+  
+  .light {
+    width: 75px;
+    height: 75px;
+    background-color: white;
+    border-radius: 37.5px;
+    position: absolute;
+    left: 0px;
+  }
+  
+  .dark {
+    width: 75px;
+    height: 75px;
+    background-color: midnightblue;
+    border-radius: 37.5px;
+    position: absolute;
+    left: 75px;
+    transition: all 2.5s linear
+  }
+  
+  .stars {
+    z-index: 100;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width:100vw;
+    height: 100vh;
+  }
+  
+  .stars > div {
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+  }
+  
+  
+.body {
+  background-color: #87cebb;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.password {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 600px;
+}
+
+.password-input {
+  height: 100px;
+  width: 60px;
+  background-color: #eee;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+  color: #007bff; 
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding-top: 4rem;
+  padding-bottom: -4rem;
+}
+
+
+
+.hint {
+  text-align: center;
+  color: #007bff;
+}
+
+.hint-txt {
+  display:none;
+}
+
+.hint-btn {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.hint:hover .hint-txt {
+  display: block
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.emoji {
+  font-size: 10rem;
+}
+
+.message {
+  font-weight: 700;
+  font-size: 1.5rem;
+  background-color: white;
+  text-align: center;
+  padding: 6px;
+  border-radius: 8px;
+}
