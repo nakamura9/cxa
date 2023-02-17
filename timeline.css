@@ -1,0 +1,87 @@
+
+  
+  .timeline-container {
+    background-color: #87CEEB;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    overflow-x: auto;
+  }
+  
+  #timeline-inner {
+    height: 100vh;
+    position: relative;
+  }
+  
+  .timeline {
+    height: 20px;
+    left: 0px;
+    top: calc(50vh - 10px);
+    width: 200vw;
+    background-color: #007bff;
+    border-radius: 10px;
+    position: absolute;
+  }
+  
+  .ticker-layer {
+    z-index:10;
+    height: 100vh;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  
+  .ticker {
+    height: 200px;
+    position: absolute;
+    top: calc(50vh - 100px);
+    left: 0px;
+    min-width: 200px;
+  }
+  
+  .ticker-stem {
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #007bff;
+    position: absolute;
+    transform: scaleY(0.5);
+  }
+  
+  .ticker-label {
+    background-color: white;
+    margin: 8px;
+    padding: 16px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    font-family: sans-serif;
+    white-space: nowrap;
+    border-radius: 8px;
+  }
+  
+  .ticker:hover .ticker-label {
+    opacity: 1;
+  }
+  
+  .ticker:hover .ticker-stem {
+    transform: scaleY(1);
+  }
+
+.callout {
+
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    background-color: white;
+    padding: 16px;
+    margin: 8px;
+    border-radius: 8px;
+}
