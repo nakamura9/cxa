@@ -95,7 +95,7 @@ html {
   
   
 .body {
-  background-color: #87cebb;
+  background-color: #87ceeb;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -166,3 +166,4 @@ html {
   padding: 6px;
   border-radius: 8px;
 }
+
