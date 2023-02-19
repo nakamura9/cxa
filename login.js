@@ -53,6 +53,7 @@ window.addEventListener('keydown', event => {
     }
     if(valid) {
         state = 2
+        document.cookie += "login=1;"
         setEmoji("It is! Welcome.")
         setTimeout(() => {location.replace('/')}, 2000)
     } else {
@@ -62,4 +63,8 @@ window.addEventListener('keydown', event => {
     values = []
   }
   console.log(event.code)
+})
+
+document.querySelector(".body").addEventListener("click", () => {
+  document.querySelector("input").focus()
 })

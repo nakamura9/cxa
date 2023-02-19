@@ -167,3 +167,9 @@ html {
   border-radius: 8px;
 }
 
+input {
+  opacity:  0;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
