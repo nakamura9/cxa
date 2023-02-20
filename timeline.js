@@ -7,7 +7,6 @@
   const end = lastEvent.date
   const span = (end - start) / dayInMs
   let loggedIn = false
-  alert(document.cookie)
   document.cookie.split(";").forEach(c => {
     if(c.indexOf("login") > -1) {
       const [key, value] = c.split("=")

@@ -2,12 +2,12 @@
 
 let values = []
 const ans = [
-  'Digit1',
-  'Digit8',
-  'Digit0',
-  'Digit9',
-  'Digit2',
-  'Digit2',
+  '1',
+  '8',
+  '0',
+  '9',
+  '2',
+  '2',
 ]
 
 
@@ -27,10 +27,11 @@ const setEmoji = (msg) => {
 setEmoji("Hello, is it you?")
 
 window.addEventListener('keydown', event => {
+  console.log(event)
   if(event.code == 'Backspace') {
     values.pop()
   } else {
-    values.push(event.code)
+    values.push(event.key)
   }
   console.log(values)
   const cells = document.querySelectorAll('.password-input')
@@ -55,7 +56,7 @@ window.addEventListener('keydown', event => {
         state = 2
         document.cookie += "login=1;"
         setEmoji("It is! Welcome.")
-        setTimeout(() => {location.replace('/')}, 2000)
+        setTimeout(() => {location.replace('/cxa/')}, 2000)
     } else {
         state = 1
         setEmoji("I don't seem to know you.")
