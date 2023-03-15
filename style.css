@@ -158,10 +158,12 @@ html {
 }
 
 input {
-  opacity:  0;
-  position: absolute;
-  left: 0px;
-  top: 0px;
+  background: transparent;
+  border-bottom: 3px solid #007bff !important;
+  border: 0px;
+  outline: 0px;
+  font-size: 4rem;
+  opacity: 0;
 }
 
 .home {
@@ -201,4 +203,21 @@ input {
 
 .card a {
   text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    .password {
+      display: none;
+    }
+
+    input {
+      opacity: 1;
+      max-width: 300px;
+      margin: 0px auto;
+    }
+
+    .body {
+      width: 100vw;
+      height: 100vh;
+    }
 }
