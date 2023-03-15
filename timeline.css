@@ -19,12 +19,12 @@
   }
   
   .timeline {
-    height: 20px;
+    height: 30vh;
     left: 0px;
-    top: calc(50vh - 10px);
+    top: 70vh;
     width: 200vw;
-    background-color: #007bff;
-    border-radius: 10px;
+    background-color: #7F461B;
+    border-top: 20px solid #7CFC00;
     position: absolute;
   }
   
@@ -39,7 +39,7 @@
   .ticker {
     height: 200px;
     position: absolute;
-    top: calc(50vh - 100px);
+    top: calc(70vh - 100px);
     left: 0px;
     min-width: 200px;
   }
@@ -121,10 +121,10 @@
     background-color: yellow;
     border-radius: 37.5px;
     position: absolute;
-    left: 50vw;
-    top: 0px;
+    left: 25vw;
+    top: 70vh;
     z-index:1000;
-    transition: all 3s ease;
+    transition: all 0.033s ease;
   }
   
 /*   
@@ -144,19 +144,16 @@
   } */
   
   .moon {
-    display: none;
     position: absolute;
     left: 0px;
     top: calc(50vh - 37.5px);
     z-index:1000;
     transform-origin: 50vw 100vh;
-    transition: all 5s linear;
   }
   
   .moon-content {
     width: 150px;
     height: 75px;
-    transition: all 2.5s linear
   }
   
   .light {
@@ -175,7 +172,6 @@
     border-radius: 37.5px;
     position: absolute;
     left: 75px;
-    transition: all 2.5s linear
   }
   
   .stars {

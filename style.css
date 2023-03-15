@@ -23,16 +23,8 @@ html {
     top: calc(50vh - 37.5px);
     z-index:1000;
     transform-origin: 50vw 100vh;
-    transition: all 3s ease;
+    /* transition: all 3s ease; */
   }
-  
-  
-  .skybox:hover .sun,
-  .skybox:hover .moon
-  {
-    transform: rotateZ(180deg)
-  }
-  
   
   .skybox:hover .dark {
     transform: translateX(-75px);
@@ -48,14 +40,12 @@ html {
     top: calc(50vh - 37.5px);
     z-index:1000;
     transform-origin: 50vw 100vh;
-    transition: all 5s linear;
   }
   
   .moon-content {
     border: 1px solid red;
     width: 150px;
     height: 75px;
-    transition: all 5s linear
   }
   
   .light {
@@ -172,4 +162,43 @@ input {
   position: absolute;
   left: 0px;
   top: 0px;
+}
+
+.home {
+  background-color: #87ceeb;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 300px;
+  background-color: white;
+  box-shadow:rgba(0, 0, 0, 0.35);
+  border-radius: 10px;
+  padding: 20px;
+
+}
+
+.home h2 {
+  text-align: center
+}
+
+.card li {
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  transition: 0.3s ease;
+}
+
+.card li:hover {
+  color: #007bff;
+  font-weight: 700;
+}
+
+.card a {
+  text-decoration: none;
 }

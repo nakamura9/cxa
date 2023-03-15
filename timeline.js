@@ -6,21 +6,7 @@
   const lastEvent = events[events.length - 1]
   const end = lastEvent.date
   const span = (end - start) / dayInMs
-  let loggedIn = false
-  document.cookie.split(";").forEach(c => {
-    if(c.indexOf("login") > -1) {
-      const [key, value] = c.split("=")
-      if(value === "1") {
-        loggedIn = true
-      }
-    }
-  })
-
-  if(!loggedIn) {
-    location.replace("/cxa/login")
-  }
-  
-  
+   
   const timeline = document.querySelector('.timeline')
   const dummy = document.querySelector('#timeline-inner')
   timeline.style.width = `${(span + 3) * 200}px`
@@ -52,7 +38,7 @@ const calculateDayColour = () => {
   const dayLight = [135,206,235]
   const night = [25,25,112]
   const delta = dayLight.map((v,i) => v - night[i])
-  const modulo = 1400
+  const modulo = 1000
   
   const position = track.scrollLeft
 
@@ -60,66 +46,67 @@ const calculateDayColour = () => {
   ratio = ratio > 0.5 ? 2- (ratio * 2) : ratio * 2
   const color = dayLight.map((v, i) => v - parseInt(delta[i] * ratio))
   skybox.style.background = `rgb(${color[0]}, ${color[1]}, ${color[2]})` 
+  const dark = document.querySelector('.dark')
+  dark.style.background = `rgb(${color[0]}, ${color[1]}, ${color[2]})` 
 }
 
 
+const calculateSunPositionByAngle = (x) => {
+  const angleRad = (Math.PI / 2) + ((x / 360) * (2 * Math.PI))
+  const width = document.querySelector('.skybox').clientWidth
+  const height = document.querySelector('.skybox').clientHeight
+  const radius = height / 2
+  const adj = Math.cos(angleRad) * radius
+  const opp = Math.sin(angleRad) * radius
+  const xPos = (width / 2) - adj
+  const yPos = (height / 2) - opp
+  const sun = document.querySelector('.sun')
+  sun.style.top = `${yPos}px`
+  sun.style.left = `${xPos}px`
+}
+
+const calculateMoonPositionByAngle = (x) => {
+  const angleRad = ((3 * Math.PI) / 2) + ((x / 360) * (2 * Math.PI))
+  const width = document.querySelector('.skybox').clientWidth
+  const height = document.querySelector('.skybox').clientHeight
+  const radius = height / 2
+  const adj = Math.cos(angleRad) * radius
+  const opp = Math.sin(angleRad) * radius
+  const xPos = (width / 2) - adj
+  const yPos = (height / 2) - opp
+  const moon = document.querySelector('.moon')
+  moon.style.top = `${yPos}px`
+  moon.style.left = `${xPos}px`
+}
+
+const setMoonFraction = () => {
+  const count = parseInt(track.scrollLeft / 1000) % 5
+  const dark = document.querySelector('.dark')
+  dark.style.left = `${75 - (count * 15)}px`
+} 
+
 const calculateSunPosition = () => {
-  const angle = 180
-  const modulo = 1400
-  const origin = [0, 50]
-  const midday = [50, 5]
-  const sunset = [100, 50]
-  
+  const modulo = 1000
   const position = track.scrollLeft
   let ratio = (position % modulo) / modulo
   
-
-  const sun = document.querySelector('.sun')
-  
-  if(ratio > 0.25 && ratio < 0.75) {
-    sun.style.display = 'none'
-    return
-  } else {
-    sun.style.display = 'block'
-  }
-
-  let sunX = 0
-  let sunY = 50
-
-  
-
-  
-  if(ratio <= 0.25) {
-    ratio = ratio / 0.25
-  } else {
-    ratio = (1 - ratio) / 0.25
-  }
-
-  sunY = ratio * 100
-  sunX = ratio * 100
-
-  sun.style.top = `${sunY}vh`
-  sun.style.left = `${sunY}vw`
+  calculateSunPositionByAngle(ratio * 360)
 }
 
 const calculateMoonPosition = () => {
-  const dayLight = [135,206,235]
-  const night = [25,25,112]
-  const delta = dayLight.map((v,i) => v - night[i])
-  const modulo = 1400
-  
+  const modulo = 1000
   const position = track.scrollLeft
-  console.log(position)
   let ratio = (position % modulo) / modulo
-  ratio = ratio > 0.5 ? 2- (ratio * 2) : ratio * 2
-  const color = dayLight.map((v, i) => v - parseInt(delta[i] * ratio))
-  track.style.background = `rgb(${color[0]}, ${color[1]}, ${color[2]})`
+  
+  calculateMoonPositionByAngle(ratio * 360)
+  setMoonFraction()
 }
 
 
 track.addEventListener('scroll', evt => {
   calculateDayColour()
-  // calculateSunPosition()
+  calculateSunPosition()
+  calculateMoonPosition()
 })
 
 const starContainer = document.querySelector('.stars')
