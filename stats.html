@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <link rel="stylesheet" href="stats.css">
+</head>
+<body>
+
+    <main>
+        <h1 class="text-center">By the Numbers</h1>
+
+    <div class="deck">
+        <div class="card">
+            <div class="card-body">
+                <h4>Average Message Length</h4>
+                <div class="pill">
+                    Caleb
+                    <span id="avg_msg_caleb"></span>
+                </div>
+                <div class="pill">
+                    Althea
+                    <span id="avg_msg_althea"></span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4>Random Stats</h4>
+                
+                <div class="pill">
+                    Unqiue Words
+                    <span id="unique_words"></span>
+                </div>
+                <div class="pill">
+                    Average Messages Per Day
+                    <span id="avg_msg_daily"></span>
+                </div>
+                <div class="pill">
+                    Average Messages Per Hour
+                    <span id="avg_msg_hourly"></span>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h4>Number of Messages</h4>
+                <canvas id="no-msg" ></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h4>Word Frequency</h4>
+                <label>Type Word to get its frequency:</label><br>
+                
+                <input type="text" name="" id="">
+                <button onclick="searchFrequency()">Search</button>
+                
+                <span id="frequency"></span>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-body">
+                <h4>Messages By Hour</h4>
+                <canvas id="msg-per-hour" style="width:600px;max-width:600px"></canvas>
+
+            </div>
+        </div>
+
+        <div class="card" style="width:600px;">
+            <div class="card-body">
+                <h4>Messages By Date</h4>
+                <canvas id="msg-by-date" style="width:600px"></canvas>
+            </div>
+        </div>
+
+    </div>
+    
+    </main>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+    </script>
+
+    <script src="stats.js" type="text/js"></script>
+    <script defer>
+
+var obj = {};
+
+
+const renderCharts = () => {
+    const msgPerHourChartLabels = Array.from(Object.keys(obj["avg_msg_per_hour"])).sort()
+    const msgPerHourChartData = msgPerHourChartLabels.map((label) => obj["avg_msg_per_hour"][label])
+    console.log({msgPerHourChartLabels, msgPerHourChartData})
+    const msgByDateChartLabels = Array.from(Object.keys(obj["avg_msg_per_day"])).sort()
+    const msgByDateChartData = msgByDateChartLabels.map((label) => obj["avg_msg_per_day"][label])
+    console.log({msgPerHourChartLabels, msgPerHourChartData})
+    const msgPerHourChart =  new Chart("msg-per-hour", {
+        type: "bar",
+        data: {
+            labels: msgPerHourChartLabels,
+            datasets: [{
+                label: "Messages per hour",
+                backgroundColor: "crimson",
+                data: msgPerHourChartData,
+            }]
+        },
+        options: {}
+      })
+      // create chartjs options that will be used for all charts
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+            display: false,
+            },
+            scales: {
+            xAxes: [{
+                gridLines: {
+                display: false,
+                },
+            }],
+            yAxes: [{
+                gridLines: {
+                display: false,
+                },
+            }],
+            },
+        };
+        
+
+      const msgPerDayChart =  new Chart("msg-by-date", {
+        type: "bar",
+        data: {
+            labels: msgByDateChartLabels,
+            datasets: [{
+                label: "Messages on date",
+                backgroundColor: "crimson",
+                data: msgByDateChartData,
+            }]
+        },
+        options: chartOptions
+      })
+
+      const noMessageCharge =  new Chart("no-msg", {
+        type: "doughnut",
+        
+        data: {
+            labels: ['Caleb', 'Althea'],
+            datasets: [{
+                label: "Messages Total",
+                backgroundColor: ["crimson", "blue"],
+                data: [obj["msg_count"][0], obj["msg_count"][1]],
+            }]
+        },
+        options: {}
+      })
+
+    
+}
+
+const searchFrequency = () => {
+    const word = document.querySelector("input").value.toLowerCase();
+    const frequency = obj["word_frequency"][word];
+    if(frequency) {
+        document.querySelector("#frequency").innerHTML = frequency;
+    } else {
+        document.querySelector("#frequency").innerHTML = "Not found";
+    }
+    
+}
+
+const renderStats = () => {
+    document.querySelector("#avg_msg_caleb").innerHTML = parseInt(obj["avg_msg_length"][0]);
+    document.querySelector("#avg_msg_althea").innerHTML = parseInt(obj["avg_msg_length"][1]);
+    document.querySelector("#unique_words").innerHTML = obj["unique_words"];
+    document.querySelector("#avg_msg_daily").innerHTML = parseInt(obj["avg_msg_per_day_mean"]);
+    document.querySelector("#avg_msg_hourly").innerHTML = parseInt(obj["avg_msg_per_hour_mean"]);
+}
+
+fetch('stats.json')
+    .then(function (response) {
+        response.json()
+            .then(function (data) {
+                obj = data;
+                console.log(obj)
+                renderCharts();
+                renderStats();
+            })
+    })
+    </script>
+</body>
+</html>
