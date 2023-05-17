@@ -19,8 +19,8 @@
             <div class="callout">
                 <div class="ticker-label">${evt.date.toDateString()}</div>
                 <div class="button-container">
-                  ${evt.photos.length > 0 ? `<div class="button" onclick="renderImages(${i})"><i class="fa-regular fa-image fa-3x"></i></div> `: ""}      
-                  ${evt.messages.length > 0 ? `<div class="button" onclick="renderMessages(${i})"><i class="fa-regular fa-comments fa-3x"></i></div> `: ""}
+                  ${evt.photos.length > 0 ? `<div class="button" onclick="renderImages(${i}, events)"><i class="fa-regular fa-image fa-3x"></i></div> `: ""}      
+                  ${evt.messages.length > 0 ? `<div class="button" onclick="renderMessages(${i}, events)"><i class="fa-regular fa-comments fa-3x"></i></div> `: ""}
                 </div>
             </div>
             <div class="ticker-stem"></div>
@@ -139,33 +139,5 @@ const hideMessages = () => {
 
 }
 
-const renderImages = idx => {
-  const modal = document.querySelector('.modal')
-  const imgList = document.querySelector('.img-selector')
-  const current = document.querySelector('#current-img')
-  const links = events[idx].photos
-  current.src = links[0]
-  
-  modal.style.display=  "flex"
 
-  imgList.innerHTML = ""
-  links.forEach(l => {
-    imgList.innerHTML += `
-      <div class="thumbnail" onclick="setCurrentImg('${l}')">
-        <img src="${l}" />
-      </div>
-    `
-  })
-}
 
-const setCurrentImg = (url) => {
-  const current = document.querySelector('#current-img')
-  current.src = url
-
-}
-
-const hideModal = () => {
-  const phoneContainer = document.querySelector('.modal')
-  phoneContainer.style.display=  "none"
-
-}

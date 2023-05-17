@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link  href="images.css" rel="stylesheet" type="text/css">
+    <link  href="places.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+    crossorigin=""/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Our Love in Places</title>
+</head>
+<body>
+    <div class="modal">
+        <div class="modal-content">
+          <div> <button onclick="hideModal()"> <i class="fa fa-times fa-2x" aria-hidden="true"></i> </button></div>
+          <div class="frame">
+            <img id="current-img" />
+            <div class="img-selector"></div>
+          </div>
+        </div>
+      </div>
+    <div id="map"></div>
+
+    <div class="floating-card">
+        <h1>Our Love in Places</h1>
+        <div id="cards"></div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+    crossorigin=""></script>
+
+    <!--<script src="login_check.js"></script> -->
+    <script src="images.js"></script>
+    <script src="locations.js"></script>
+    <script src="places.js"></script>
+
+
+</body>
+</html>

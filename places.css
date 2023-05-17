@@ -1,0 +1,95 @@
+:root {
+    font-family: sans-serif;
+}
+
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+
+.floating-card {
+    z-index: 1000;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 100vh;
+    max-height: 100vh;
+    width: 20vw;
+    overflow-y: auto;
+}
+
+@media (max-width: 600px) {
+    .floating-card {
+        z-index: 1000;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        height: 50vh;
+        max-height: 100vh;
+        width: 100vw;
+        overflow-y: auto;
+    }
+}
+
+.floating-card h1 {
+    display: block;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.floating-card .card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+}
+
+.floating-card .card:hover .card-body {
+    display: block;
+}
+
+.floating-card .card:hover .card-title {
+    color: crimson;
+}
+
+.floating-card .card:hover .card-img {
+    width: 100%;
+    height: 250px;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #777;
+}
+
+.card-header {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.card-body {
+    display: flex;
+}
+
+.card-text {
+    flex: 1;
+    margin-left: 0.5rem;
+}
+
+.card-img {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+}
+
+.card-img img {
+    width: 100%;
+}
