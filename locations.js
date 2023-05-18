@@ -86,7 +86,7 @@ var places = [
     },
     {
         "name": "Beach House, Borrowdale Race Course",
-        "date": "24 December, 2022",
+        "date": "27 December, 2022",
         "location": [-19.134664,32.7832619],
         "description": "Fancy dinner. You looked amazing. That poke bowl. Glorious, Still don't know what was happening in that bathroom though",
         "photos": [
@@ -97,7 +97,7 @@ var places = [
     },
     {
         "name": "Tapas with Tanya",
-        "date": "24 December, 2022",
+        "date": "28 January, 2023",
         "location": [-17.7119516,31.1183000],
         "description": "Now this was a culinary adventure, and you were the perfect companion. I still remember the look on your face when you saw the menu. For the record, that will remain the only time I eat tripe.",
         "photos": [
@@ -108,7 +108,7 @@ var places = [
     },
     {
         "name": "VR Arcade",
-        "date": "24 December, 2022",
+        "date": "25 March, 2023",
         "location": [-17.7648113,30.976716],
         "description": "Fruit Ninja, with wands and headsets! I had a ball, even though the offspring and enemies of God were everywhere. Its a shame we never go to the racing.",
         "photos": [
@@ -119,7 +119,7 @@ var places = [
     },
     {
         "name": "Mozambik",
-        "date": "24 December, 2022",
+        "date": "1 April, 2023",
         "location": [-17.7368,31.113488],
         "description": "Who needs a good ambiance score with such great food!? That picture of you holding the dessert menu will live forever etched in my mind and heart",
         "photos": [
@@ -129,7 +129,7 @@ var places = [
     },
     {
         "name": "Ballantyne Park",
-        "date": "24 December, 2022",
+        "date": "15 April, 2023",
         "location": [-17.7714768,31.1000384],
         "description": "An overgrown playground for man-children and their significant others. Once again, we dominated in 30 seconds (the revisionist in me proclaims) and we plotted bushes of love in every direction.",
         "photos": [
@@ -142,7 +142,7 @@ var places = [
     },
     {
         "name": "Chinhoyi Caves",
-        "date": "24 December, 2022",
+        "date": "1 May, 2023",
         "location": [-17.3563,30.13],
         "description": "Althea looking up at things must become its own genre of photography its as breathtaking as mountain ranges and sunsets. ",
         "photos": [
