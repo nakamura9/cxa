@@ -75,7 +75,7 @@ var places = [
         "name": "Vumba",
         "date": "24 December, 2022",
         "location": [-19.134664,32.7832619],
-        "description": "Our first pcinic, it had a theme, and everyone looked great. But of course you stole the show.",
+        "description": "We got to experience the lush beauty of the eastern highlands. It was alright I guess, I got to sit in a car with a far more gorgeous beauty.",
         "photos": [
             "https://lh3.googleusercontent.com/FLzdUjzvctuf6dsx2WIWx9Zy1SlrUEy7SxjrSaOaQxXSIuY0HEvA2GikWvF4Q_Zi-bjqr1CyI-NPFABZhdIA3Unan4PiIRsPHCFRdZ8wuEdXAA6RL3h1uKSr5p-Dhstkeh67M2dSlxUKRhcf5S6QgWqBglMtOTqZyZvmtww4aaa07vgtYE1HgMgPWdY2e73XdbCkx-idPMQQFr7MH9z0fuTToRGyD8wGo73TajI2wcP98XkP2ChZ4yJJ8gdj6eZshcODIGRSokBLxfsyZCiuinwzfjpp78ppwUmzI39LGHQHbCfhbNOvwzgQzif2QXzKg8Ib0kjvVlO0MtjF6FYjYwQo6HQA-NN34sh-0yIJaAmvaC66l56a3P5L4IOS9ASRT840I9_AgN0rGl6YsJ4edxP3vMIsiAHKBr1A6tKgUujY-S0KgPHdZsCtVwQql8M5eWs_POqmnG0jV4AbrLkL8JgogiMf0sRXHoH7zD3AwnmD_9KLBPmrZoJNp4Tx6UAbCT1jMl3a8Halszyrj8eI6xtOrxK_1gJ4H6lHPgsYquwd-Y_iqk3WC8hAVkRvqUWH0geCBNp5hZkgs9S5qcpHkCvl4D05gvoN-bgZkTk9z52EL5-pcob9myW3C91dEazdkYeqiYA1jadoRHhnoq1DFhDnAX4H7hq9QdbqCE5Zf91TGQ4U90jLX5Q--mVOa8_5PpTvY3grRZtX7G5d2R0xHRmD9KTD4gCT8CVWHbQ5bM2RQqekjZGWZLzAad9lQfbnT9yPqkMOaZ6wgmP22DrMZvUxs81tT4fUYPbQnEV6Z_STX5KBGKy5bwgeDRc21Gyg7ZshifHYehWJiD_lwyLgXk_IunAvuzljoT8EuLQr9zv1A11VenOAqrvGwI9lZgYGfDs1WN4Z5bB8GywROsJTJTbgd4YZI-TtD_AjSbGun1ND=w1388-h1041-s-no?authuser=0",
             "https://lh3.googleusercontent.com/_RhG1kMNwYkhJ1PunF8maD3NKDy6N0dr-_MLCK_hZuESuJE0WelAzziqlbpXaphokErGy5igFSR_fz9c9hFFWXqoQxqdUpBzdNDuNWDAhQtKmqrJfRbpcU9DTgVG8Is5g0JxBNASmSxkHsOvcZO3DHyB19Fa2XtrSVj8_csVPlPF5MDcqEDXfptmgKezm25ds47eSVJruORlUE1jUHMNEwsDv1GIuS4zqL3WYkNwUr_nUwfUUgMGLAMTcUTSZKOE4NEvxtJXZnFsz76BTq4cLre-ayDkkyZPolQqRYEY6u-W0np1R0IrI-OOHoQnXEJxYBZL-I3-G7QMrUJzkFHjTZelgsSXc45wYRceiGAkx6OOEKGjNVNQ9Iz30HVsW8OxPYSAq2wYHlodnos2O9AV-XJ0hMUzavgOgAINSVsGtCPs3DcdTFDwmQ2oJopvYW7LYI2fG4FMXH_OwNx5AFcf5Rc8wbRfpHF44ElEiSwa1ZgqsN9kEP47TKyAFCBaXATsKFa4mEJ2lUMiPznFvyVfk0ZwijhdnX7YuH8rXfnrQTtFwOdgZN3ETip_YA7Wedh1nNjFQKz2mV-53mHMkdw4SzRvBQLPxrhdkfUetRMvw8dA5koP5CYEUSE4pPFiM7GCLxXIUUzDjghKVOAwMAJajT_2wUHHXmlDGi1FsOYAez6RdfyK1OvZCQoTziq-6UEA-S4eZwdiDmZ8kXR8c9P4peXeVFth4eKVUddnKnCd8vhGTkPGXPYeXFK2SseZKabomSfdVYp5kxwFtx6pLOzBTMISAXfBJvMT2QKyw7HitnlLnDZo8LBTMfX-8eBeUqbBVgVDL0lWnus6diE780fePEH7ojho48QmI70gy5bUaiO_RthJLFzfiC5HPptLoWIfoA2v7d6QEW_TpGqOC4h13a2P_AAKFfnakYLJIeHsyx-9=w469-h1041-s-no?authuser=0&authuser=0",
@@ -154,5 +154,14 @@ var places = [
             "https://lh3.googleusercontent.com/pw/AJFCJaXnXs6EyqRxK1Oh8CNTj4okmoZJvZPlYq_z7hnIrnCgQ77KN6sfx4sNoZXpH-mAjmNin3zBfEB8kn0RItox6QCiYBypdsbT_sJFz1-K2UJJ_dqJruVqvvs_eMZ1jAtCQRsk7yEbbv95Ta0E5aOKCGKFD-y5UUB8kftKqGyXTx6hh70NpkztOFiy4A2KdB1uERVHdyXVLfTfsEk9qH0A3i76kR4vzZwn8mQ0SHd0KTOYyxb7cArLcvU-lFsNLxAHrqippo3QHLH7doRTtq6q06AlsLHYUBJdzfp2Wx_cvqtfqPzVoKD8gMVOh6WASio2YsS_LfiI1k6Qnrg2hnxDOFTIlsWfKQ5Jy73wCdcbNAa6slfWWPIXI3_HfgEgwUHJXTtqa04_ER7IzPXSYB2GiquiyomVH1TcnF6oIOHSP2aFNj388HtSg-vUkECP3nV1-1l54zx5BeFsiYQlVS1Don1WogEGEjQNDVESaELrpJQ6BezX0qxoDovD8jCpqYDs4PGlVu--kwqsmZ33knREuzwwhrtkCP-rfj69wVlzVDtLFMrxXYfx1lQRCoIZ4T02idTLxDtJMLgV00dJMfxhk8DTso2GvKkpn2oTUD3bnY0zxAWcKQkwCyMJT36RO0mYv9hszfUponnbtCRARUwZpyzlOdwEbc0OqhVgmyLv4ZzJzHikJPtSoPlFlhqQAyfY-zdXUIXaExgOmiff-Bduft2VSfHSpj6Aj2HuMtugEnVu0s9o3DSpF0REDX14AhHb6deJHOVx8RPMaicU_oAPEynrZSP3yW7rfwPBdvivLoQshs8bZ48J_cS8ayI3n1-jZ8Umz_u9STSyRdJY5NEcPHVSOvYpmA3-BUNrsCF1zb4xdGIe0-pKnZns68knyzpi2WPDc-CGjSY_PWzdfv5xklcrHWMObwnRlDheAzQmBclv-hyCa4JzumzUNJEG5U3puzs=w1712-h771-s-no?authuser=0&authuser=0"
             
         ]
-    }
+    },
+    // {
+    //     "name": "Da Guido",
+    //     "date": "1 May, 2023",
+    //     "location": [-17.3563,30.13],
+    //     "description": "",
+    //     "photos": [
+            
+    //     ]
+    // }
 ]
