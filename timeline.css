@@ -1,3 +1,7 @@
+:root {
+  --bezel: calc(45vh * 0.02)
+}
+
 html {
   height: 100%;
   width: 100%;
@@ -28,6 +32,10 @@ body {
   position: absolute;
   left: 30vw;
   border-radius: 12px;
+}
+
+.event {
+  position: absolute;
 }
 
 .timeline-point {
@@ -73,26 +81,15 @@ body {
   transform: scale(0.8);
 }
 
-.overlay {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0px;
-  left: 0px;
-  z-index: 1000;
-  color: white;
-  background: rgba(0,0,0,0.5);
-}
 
 .calendar {
-  width: 50vw;
-  margin: 10vh auto;
   font-size: 4rem;
   font-family: sans-serif;
   display: flex;
   gap: 1rem;
   justify-content: center;
-  
+  position: absolute;
+  left: 35vw
 }
 
 .calendar > div {
@@ -102,10 +99,231 @@ body {
   border-radius: 1rem;
 }
 
-.overlay-options {
-  display: flex;
-  font-size: 10rem;
+
+
+/* phone interface */
+
+.phone-container {
+  z-index: 1000;
+  position: fixed;
   width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.9);
   justify-content: center;
-  gap: 4rem
+  align-items: center;
+  left: 0px;
+  top: 0px;
+  display: none;
 }
+
+.phone {
+  height: 98vh;
+  width: 45vh;
+  border-radius: 20px;
+  border: var(--bezel) solid black;
+  background-image: url("https://d1o3iaztod5fxw.cloudfront.net/20230218_170146.jpg");
+  background-size: cover;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  position: relative;
+  box-sizing: border-box;
+
+}
+
+.messages {
+  font-family: sans-serif;
+  flex: 1;
+  overflow-y: auto;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.input {
+  height: 50px;
+  display: flex;
+  margin: 4px;
+}
+
+.send {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #ccc;
+  color: #25D366;
+  margin: 2px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+
+.field {
+  background-color: #ddd;
+  flex: 1;
+  border-radius: 25px;
+  margin: 2px;
+}
+
+.message-sent,
+.message-received {
+  min-height: 30px;
+  border-radius: 8px;
+  padding: 0.5vh;
+  margin:4px;
+  width: 85%;
+  color: white;
+  font-weight: 500;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.message-received {
+  margin-left: calc(15% - 8px);
+  background-color: #075E54;
+}
+
+.message-sent {
+  background-color: #3B3D3D;
+}
+
+.time {
+  font-size: 0.75rem;
+  text-align: right;
+}
+
+.header {
+  color: #222;
+  display: flex;
+  height: 58px;
+  align-items: center;
+  width: 100%;
+  justify-content: space-around;
+  background-color: #dddd;
+}
+
+.header i {
+  margin: 1.5vh
+}
+
+.heading-text {
+  flex: 1;
+  font-family: sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.profile {
+  background-image: url("/images/enjoy.jpg");
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius:25px;
+}
+
+.chin {
+  background-color: black;
+  width: 60%;
+  position: absolute;
+  left: 20%;
+  top: 0px;
+  height: 30px;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.status-bar {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px 5px;
+  font-family: sans-serif;
+}
+
+
+.icons {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 12vh;
+  width: calc(100% - 2.9vh);
+  margin: calc(42vh * 0.04);
+  background: rgba(255, 255, 255, 0.192);
+  backdrop-filter: blur(5px);
+  border-radius: 1.5vh;
+  display: flex;
+}
+
+
+.icons > div {
+  height: 10vh;
+  background-color: grey;
+  margin: 1vh;
+  border-radius: 1vh;
+  width: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 6vh;
+  color: #222
+}
+
+.icon-messages {
+  color: white !important;
+  background-color: #3FE25C !important;
+}
+
+.phone-container > i.fa {
+  position: absolute;
+  color: white;
+  right: 0px;
+  margin: 1rem;
+}
+
+.photo-app {
+  overflow: hidden;
+  border-radius: 1vh;
+  background-color: white;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  height: 100%
+}
+
+.current-photo {
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.current-photo img {
+  width: 100%;
+  height: auto;
+}
+
+.photo-list {
+  height: 15vh;
+  background-color: white;
+  overflow-x: auto;
+  margin-top: 2px;
+}
+
+.photo-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2px
+}
+
+.photo {
+  width: 15vh;
+  min-width: 15vh;
+  height: 15vh;
+  max-height: 15vh;
+  overflow: hidden;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+}
+

@@ -5,72 +5,33 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>CalebXAlthea</title>
-  <link href="images.css" rel="stylesheet" type="text/css" />
   <link href="timeline.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+  
   <div class="timeline">
     <div class="timeline-track">
       <div class="timeline-line">
 
       </div>
 
-      <div class="timeline-point">
-        <div class="timeline-point-inner">
-          <i class="fas fa-image    "></i>
-        </div>
-      </div>
+
     </div>
 
   </div>
-  <!--
-  <div class="overlay">
-      <div class="calendar">
-        <div id="date">10</div>
-        <div id="month">03</div>
-        <div id="year">2023</div>
-      </div>
-      <div class="overlay-options">
-        <div class="photos">
-          <i class="fa fa-camera" aria-hidden="true"></i>
-        </div>
-        <div class="phone">
-          <i class="fa fa-mobile" aria-hidden="true"></i>
-        </div>
-      </div>
-  </div>
--->
+
   <div class="phone-container">
+    <i class="fa fa-times" aria-hidden="true" onclick="hideOverlay()"></i>
     <div class="phone">
-      <div class="header">
-        <i onclick="hideMessages()" class="fa-solid fa-2x fa-arrow-left"></i>
-        <div class="profile"></div>
-        Sic Simpie Tyrannis
-        <i class="fa-solid fa-2x fa-ellipsis-v"></i>
-      </div>
-      <div class="messages">
-      </div>
-      <div class="input">
-        <div class="field"></div>
-        <div class="send"><i class="fa-solid fa-angle-right fa-2x"></i></div>
-      </div>
+      
     </div>
   
   </div>
+
   
-  <div class="modal">
-    <div class="modal-content">
-      <div> <button onclick="hideModal()"> <i class="fa fa-times fa-2x" aria-hidden="true"></i> </button></div>
-      <div class="frame">
-        <img id="current-img" />
-        <div class="img-selector"></div>
-      </div>
-    </div>
-  </div>
-  
-  <script src="images.js"></script>
+  <!-- <script src="images.js"></script> -->
   <script src="events.js"></script>
   <script src="timeline.js"></script>
 
