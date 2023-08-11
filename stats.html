@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stats</title>
-    <link rel="stylesheet" href="stats.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stats.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lunasima&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-
+    <div class="home-navigator">
+        <a href="/index.html"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+      </div>
     <main>
         <h1 class="text-center">By the Numbers</h1>
 
@@ -64,7 +71,7 @@
             </div>
         </div>
 
-        <div class="card">
+        <div class="white-card">
             <div class="card-body">
                 <h4>Messages By Hour</h4>
                 <canvas id="msg-per-hour" style="width:600px;max-width:600px"></canvas>
@@ -72,7 +79,7 @@
             </div>
         </div>
 
-        <div class="card" style="width:600px;">
+        <div class="white-card" style="width:600px;">
             <div class="card-body">
                 <h4>Messages By Date</h4>
                 <canvas id="msg-by-date" style="width:600px"></canvas>
@@ -87,7 +94,7 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
 
-    <script src="stats.js" type="text/js"></script>
+    <script src="/js/stats.js" type="text/js"></script>
     <script defer>
 
 var obj = {};
@@ -96,7 +103,6 @@ var obj = {};
 const renderCharts = () => {
     const msgPerHourChartLabels = Array.from(Object.keys(obj["avg_msg_per_hour"])).sort()
     const msgPerHourChartData = msgPerHourChartLabels.map((label) => obj["avg_msg_per_hour"][label])
-    console.log({msgPerHourChartLabels, msgPerHourChartData})
     const msgByDateChartLabels = Array.from(Object.keys(obj["avg_msg_per_day"])).sort()
     const msgByDateChartData = msgByDateChartLabels.map((label) => obj["avg_msg_per_day"][label])
     console.log({msgPerHourChartLabels, msgPerHourChartData})
@@ -183,7 +189,7 @@ const renderStats = () => {
     document.querySelector("#avg_msg_hourly").innerHTML = parseInt(obj["avg_msg_per_hour_mean"]);
 }
 
-fetch('stats.json')
+fetch('/data/stats.json')
     .then(function (response) {
         response.json()
             .then(function (data) {

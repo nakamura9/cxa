@@ -8,7 +8,7 @@ let loggedIn = false
     }
   })
 
-  if(!loggedIn) {
-    location.replace("/cxa/login")
+  if(window.localStorage.getItem("LoggedIn") == null) {
+    location.replace("/login.html")
   }
  

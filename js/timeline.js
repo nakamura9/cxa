@@ -73,6 +73,10 @@ const renderMessages = idx => {
       ? `<div class="message-sent">${msg.msg}<div class="time">${msg.time}</div></div>`
       : `<div class="message-received">${msg.msg}<div class="time">${msg.time}</div></div>`
   })
+
+  if(!messages.length) {
+    msgList.innerHTML = `<div class="message-sent">This chat is empty. Messages sent on Whatsapp are end to end encrypted.<div class="time"></div></div>`
+  }
   
 
 }
@@ -115,46 +119,7 @@ const renderHomeScreen = (idx) => {
 }
 
 
-const renderPhotos = (idx, arr) => {
-  const links = arr[idx].photos
-  console.log(links)
-  const phoneContainer = document.querySelector('.phone')
-  phoneContainer.style.background = "#efefef"
 
-  phoneContainer.innerHTML = `
-  <div class="chin"></div>
-      <div class="status-bar" onclick="renderHomeScreen(${idx})">
-        <div>
-          9:41
-        </div>
-        <div>
-          <i class="fa fa-wifi" aria-hidden="true"></i>
-          <i class="fa fa-battery-half" aria-hidden="true"></i>
-        </div>
-      </div>
-      <div class="photo-app">
-        <div class="current-photo">
-          <img id="current-img">
-        </div>
-        <div class="photo-list">
-          <div class="photo-track">
-            ${links.map(l => (`<div class="photo" onclick="setCurrent('${l}')">
-            <img src="${l}" >
-          </div>`)).join("")}
-          </div>
-        </div>
-      </div>
-  `
-  document.querySelector(".status-bar").style.color = "black"
-  const current = document.querySelector('#current-img')
-  current.src = links[0]
-}
-
-setCurrent = (url) => {
-  const current = document.querySelector('#current-img')
-  current.src = url
-
-}
 
 // renderPhotos(1, events)
 
@@ -163,7 +128,3 @@ const showEvents = (idx) => {
   renderHomeScreen(idx)
 }
 
-function hideOverlay() {
-  document.querySelector('.phone-container').style.display = "none"
-
-}

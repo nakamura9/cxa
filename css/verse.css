@@ -1,0 +1,36 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    background-color: red;
+    position: fixed;
+    top: 37vh;
+    left: 25vw;
+    height: 60vh;
+    width: 26vw;
+    z-index: 100;
+}
+
+
+@media (max-width: 576px) {
+    main {
+        background-position-x: 25%;
+    }
+}
+
+img {
+    height: 100%;
+    width: auto;
+}

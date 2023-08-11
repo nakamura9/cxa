@@ -2,9 +2,15 @@
     font-family: sans-serif;
 }
 
+
+
 #map {
     width: 100vw;
     height: 100vh;
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
 }
 
 .floating-card {
@@ -92,4 +98,8 @@
 
 .card-img img {
     width: 100%;
+}
+
+.stars {
+    color: #F7D010
 }

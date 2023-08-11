@@ -5,26 +5,108 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>CalebXAlthea</title>
-  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="/css/phone.css" rel="stylesheet" type="text/css" />
+  <link href="/css/login.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Lunasima&family=Noto+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="body">
-    <div class="modal">
-        <span class="emoji"></span>
-        <p class="message">Hello, is it you?</p>
-    </div>  
+  <style>
     
-    <input type="password" />
-    <div class='hint'>
-      <p class='hint-btn'>HINT</p>
-      <p class='hint-txt'>When it all began</p>
-    </div>
-  </div>
 
+    .phone {
+      background-image: url("https://d1o3iaztod5fxw.cloudfront.net/20221225_135852.jpg");
+      
+    }
+
+    .phone-container {
+      display: block;
+      background: rgba(0,0,0,0)
+    }
+  </style>
+
+  <div class="phone-container">
+    <i class="fa fa-question" aria-hidden="true" ></i>
+    <div class="phone">
+      
+      <div class="glass">
+        <div class="chin"></div>
+        <div class="passcode">
+            <div class="passcode-content">
+              <p>Enter Passcode</p>
+              <div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+              </div>
+            </div>
+        </div>
+        <div class="numpad">
+          <div class="numpad-row" >
+            <div class="number" data-value="1">
+              1
+              <div class="letters"></div>
+            </div>
+            <div class="number" data-value="2">
+              2
+              <div class="letters">ABC</div>
+            </div>
+            <div class="number" data-value="3">
+              3
+              <div class="letters">DEF</div>
+            </div>
+          </div>
+          <div class="numpad-row">
+            <div class="number" data-value="4">
+              4
+              <div class="letters">GHI</div>
+            </div>
+            <div class="number" data-value="5">
+              5
+              <div class="letters">JKL</div>
+            </div>
+            <div class="number" data-value="6">
+              6
+              <div class="letters">MNO</div>
+            </div>
+          </div>
+          <div class="numpad-row">
+            <div class="number" data-value="7">
+              7
+              <div class="letters">PQRS</div>
+            </div>
+            <div class="number" data-value="8">
+              8
+              <div class="letters">TUV</div>
+            </div>
+            <div class="number" data-value="9">
+              9
+              <div class="letters">WXYZ</div>
+            </div>
+          </div>
+          <div class="numpad-row">
+            <div class="number" data-value="0">
+              0
+              <div class="letters"></div>
+            </div>
+          </div>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  
+  </div>
   
   
-  <script src="login.js"></script>
+  <script src="/js/login.js"></script>
 
 </body>
 

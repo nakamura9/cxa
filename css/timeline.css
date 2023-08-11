@@ -103,34 +103,8 @@ body {
 
 /* phone interface */
 
-.phone-container {
-  z-index: 1000;
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-  left: 0px;
-  top: 0px;
-  display: none;
-}
 
-.phone {
-  height: 98vh;
-  width: 45vh;
-  border-radius: 20px;
-  border: var(--bezel) solid black;
-  background-image: url("https://d1o3iaztod5fxw.cloudfront.net/20230218_170146.jpg");
-  background-size: cover;
-  margin: 0px auto;
-  display: flex;
-  flex-direction: column;
-  padding: 5px;
-  position: relative;
-  box-sizing: border-box;
 
-}
 
 .messages {
   font-family: sans-serif;
@@ -220,24 +194,6 @@ body {
   border-radius:25px;
 }
 
-.chin {
-  background-color: black;
-  width: 60%;
-  position: absolute;
-  left: 20%;
-  top: 0px;
-  height: 30px;
-  border-radius: 0px 0px 15px 15px;
-}
-
-.status-bar {
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  padding: 2px 5px;
-  font-family: sans-serif;
-}
-
 
 .icons {
   position: absolute;
@@ -271,59 +227,26 @@ body {
   background-color: #3FE25C !important;
 }
 
-.phone-container > i.fa {
-  position: absolute;
-  color: white;
-  right: 0px;
-  margin: 1rem;
-}
 
-.photo-app {
-  overflow: hidden;
-  border-radius: 1vh;
-  background-color: white;
-  padding: 2px;
-  display: flex;
-  flex-direction: column;
-  height: 100%
-}
 
-.current-photo {
-  overflow: hidden;
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-.current-photo img {
-  width: 100%;
-  height: auto;
-}
+@media (max-width: 500px) {
+  .timeline-line {
+    left: 15vw;
+  }
 
-.photo-list {
-  height: 15vh;
-  background-color: white;
-  overflow-x: auto;
-  margin-top: 2px;
-}
+  
+  .timeline-point {
+    left: calc(15vw - 15px)
+  }
 
-.photo-track {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 2px
-}
+  .calendar {
+    left: 25vw;
+    gap: .5rem
+  }
 
-.photo {
-  width: 15vh;
-  min-width: 15vh;
-  height: 15vh;
-  max-height: 15vh;
-  overflow: hidden;
+  .calendar > div {
+    font-size: 3rem;
+    padding: .5rem;
+  }
 }
-
-.photo img {
-  width: 100%;
-  height: auto;
-}
-
