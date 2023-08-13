@@ -108,12 +108,16 @@ const renderHomeScreen = (idx) => {
     <div></div>
   </div>
   <div class="icons">
-    <div class="icon-photos" onclick="renderPhotos(${idx}, events)">
+    ${events[idx].photos.length > 0 
+      ? `<div class="icon-photos" onclick="renderPhotos(${idx}, events)">
       <i class="fa fa-camera" aria-hidden="true"></i>
-    </div>
-    <div class="icon-messages" onclick="renderMessages(${idx})">
+    </div>`
+      : ""}
+    ${events[idx].messages.length > 0 
+      ? `<div class="icon-messages" onclick="renderMessages(${idx})">
       <i class="fa fa-comments" aria-hidden="true"></i>
-    </div>
+    </div>`
+     : ""}
   </div>
   `
 }

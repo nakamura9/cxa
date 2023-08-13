@@ -146,8 +146,7 @@ var places = [
             "https://d1o3iaztod5fxw.cloudfront.net/20230415_143943.jpg",
             "https://d1o3iaztod5fxw.cloudfront.net/20230415_143959.jpg",
             "https://d1o3iaztod5fxw.cloudfront.net/20230415_161220.jpg",
-            "https://d1o3iaztod5fxw.cloudfront.net/20230415_161358.jpg",
-            "https://d1o3iaztod5fxw.cloudfront.net/"
+            "https://d1o3iaztod5fxw.cloudfront.net/20230415_161358.jpg"
         ]
     },
     {
@@ -169,13 +168,27 @@ var places = [
             "https://d1o3iaztod5fxw.cloudfront.net/20230501_130422.jpg"
         ]
     },
-    // {
-    //     "name": "Da Guido",
-    //     "date": "1 May, 2023",
-    //     "location": [-17.3563,30.13],
-    //     "description": "",
-    //     "photos": [
-            
-    //     ]
-    // }
+    {
+        "name": "Cresta Lodge Harare",
+        "date": "1 July, 2023",
+        "ambience": 9,
+        "location": [-17.8331,31.1016],
+        "description": "Our chance to look at wedding venues and try the food. First impressions? Pretty great. Also muse looks awesome as always.",
+        "photos": [
+            "https://d1o3iaztod5fxw.cloudfront.net/20230701_130133.jpg",
+            "https://d1o3iaztod5fxw.cloudfront.net/20230701_130429.jpg",
+        ]
+    },
+    {
+        "name": "Barbenhiemer @ Ster Kinekor",
+        "date": "29 July, 2023",
+        "ambience": 6,
+        "location": [-17.7607,31.0889],
+        "description": "I'm just Ken, and anywhere else I'd be a ten.",
+        "photos": [
+            "https://d1o3iaztod5fxw.cloudfront.net/20230729_194521.jpg",
+            "https://d1o3iaztod5fxw.cloudfront.net/20230729_195032.jpg",
+        ]
+    },
+    
 ]

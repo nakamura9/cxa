@@ -45,7 +45,7 @@ const registerNumberEvents = () => {
     document.querySelectorAll(".number")
         .forEach(btn => {
             btn.addEventListener("click", evt => {
-                numbers.push(evt.target.dataset.value )
+                numbers.push(evt.currentTarget.dataset.value )
                 if(numbers.length == 6) {
                     logIn()
                 }
