@@ -3,6 +3,7 @@ body {
     height: 100vh;
     max-height: 100vh;
     margin: 0;
+    background-image: url(/images/simon-berger-JH_R66BihvA-unsplash.jpg);
 }
 
 main {
@@ -33,4 +34,62 @@ main {
 img {
     height: 100%;
     width: auto;
+}
+
+.cover {
+    width: 70vw;
+    height: 90vh;
+    margin: 5vh auto;
+    background-color: #805134;
+    border-radius: 3vh;
+    display: flex;
+    padding: 2vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.page {
+    background-color: #DED7C2;
+    flex: 1;
+    border-radius: 3vh;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.page h1 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 4rem;
+}
+
+.page-content {
+    display: none;
+    /* white-space: pre; */
+    font-family: 'Esteban', serif;
+    font-size: 1.25rem;
+    padding: 4vh;
+    overflow-y: auto;
+    max-height: 78vh;
+}
+
+.page-content.active {
+    display: block;
+}
+
+ol {
+    margin: 0px auto;
+    display: block;
+    width: fit-content;
+}
+
+.link:hover {
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+@media (max-width: 576px) {
+    .page:last-child {
+        flex: 0
+    }
+    .cover {
+        width: 90vw;
+    }
 }

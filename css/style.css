@@ -5,6 +5,7 @@
   padding: 0.5rem;
   color:#777;
   opacity: 0;
+  top: 0px
 }
 
 .home-navigator:hover {
