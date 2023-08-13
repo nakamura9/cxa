@@ -173,7 +173,7 @@ var places = [
         "date": "1 July, 2023",
         "ambience": 9,
         "location": [-17.8331,31.1016],
-        "description": "Our chance to look at wedding venues and try the food. First impressions? Pretty great. Also muse looks awesome as always.",
+        "description": "Our chance to look at wedding venues and try the food. First impressions? Pretty great. I think we'll get some pretty great photos at the reception.",
         "photos": [
             "https://d1o3iaztod5fxw.cloudfront.net/20230701_130133.jpg",
             "https://d1o3iaztod5fxw.cloudfront.net/20230701_130429.jpg",
@@ -184,7 +184,7 @@ var places = [
         "date": "29 July, 2023",
         "ambience": 6,
         "location": [-17.7607,31.0889],
-        "description": "I'm just Ken, and anywhere else I'd be a ten.",
+        "description": "I'm just Ken, and anywhere else I'd be a ten. Oh, and I'm not complaining about the missing armrest.",
         "photos": [
             "https://d1o3iaztod5fxw.cloudfront.net/20230729_194521.jpg",
             "https://d1o3iaztod5fxw.cloudfront.net/20230729_195032.jpg",

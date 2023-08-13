@@ -143,8 +143,8 @@ body {
 .message-received {
   min-height: 30px;
   border-radius: 8px;
-  padding: 0.5vh;
-  margin:4px;
+  padding: 1vh;
+  margin:1.5vh;
   width: 85%;
   color: white;
   font-weight: 500;
@@ -152,7 +152,7 @@ body {
 }
 
 .message-received {
-  margin-left: calc(15% - 8px);
+  margin-left: calc(15% - 3.5vh);
   background-color: #075E54;
 }
 
