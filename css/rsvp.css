@@ -1,0 +1,67 @@
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 8rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 0;
+    background-color: white;
+    width: fit-content;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+}
+
+.window {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/jon-moore-5fIoyoKlz7A-unsplash.jpg');
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card { 
+    background-color: white;
+    width: 70vw;
+    padding: 5vw;
+    box-sizing: border-box;
+    border-radius: 2vw;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative
+}
+
+p {
+    font-family: 'Estaban' serif;
+    background-color: white;
+    width: fit-content;
+}
+
+button {
+    padding: 12px;
+    background: white;
+    border-radius: 6px;
+    border-width: 1px;
+}
+
+button:hover {
+    background-color: #333;
+    color: white
+}
+
+.flower {
+    position: absolute;
+    right: 5vw;
+    top: 5vw;
+    width: 300px;
+}
+
+.card-content {
+    z-index: 100;
+    position: relative;
+}
