@@ -9,6 +9,6 @@ let loggedIn = false
   })
 
   if(window.localStorage.getItem("LoggedIn") == null) {
-    location.replace("/login.html")
+    location.replace("/cxa/login.html")
   }
  

@@ -8,13 +8,13 @@ icons.commonProperties = {
 }
 
 icons.heart = L.icon({
-    iconUrl: '/images/heart-icon.svg',
+    iconUrl: '/cxa/images/heart-icon.svg',
     ...icons.commonProperties,
     iconSize: [50, 100],
 })
 
 icons.lock = L.icon({
-    iconUrl: '/images/padlock-icon.svg',
+    iconUrl: '/cxa/images/padlock-icon.svg',
     ...icons.commonProperties,
 })
 
